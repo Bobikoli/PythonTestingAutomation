@@ -1,20 +1,15 @@
-import unittest
 import lasku
 
-class TestLasku(unittest.TestCase):
-    def test_add(self):
-        result = lasku.add(5, 4)
-        self.assertEqual(result, 9)
-    
-    def test_multiply(self):
-        result = lasku.multiply(3, 4)
-        self.assertEqual(result, 12)
-    
-    def test_power(self):
-        result = lasku.power(2, 8)
-        self.assertEqual(result, 256)
+
+def test_add():
+    result = lasku.add(5, 4)
+    assert result, 9
 
 
+def test_multiply():
+    result = lasku.multiply(3, 4)
+    assert result, 12
 
-if __name__ == '__main__':
-    unittest.main ()
+def test_power():
+    result = lasku.power(2, 8)
+    assert result, 256
